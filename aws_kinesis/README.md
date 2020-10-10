@@ -18,5 +18,17 @@ Step 4: --> Configure the s3 compression if you have specified transformations i
             Finally choose an IAM role that has policies attached to it appropriately with S3 and AWS Glue datacatalog(if Step 2 is involved)
 Step 5: --> Review and Finish ; Takes a min or two to create the delivery stream
 
-RDS MySQL:
+MySQL:
+[mysqld]
+server-id  = 1
+log_bin  = /var/log/mysql/mysql-bin.log
+expire_logs_days = 10
+max_binlog_size  = 100M
+binlog-format    = row 
 
+If it's a RDS --> change the 'BINLOG_FORMAT' from the RDS parameters group to 'ROW'
+
+Python:
+
+pip install mysql-replication
+Change the DB details and kinesis data stream name accordingly under mysql_cdc_replication.py
