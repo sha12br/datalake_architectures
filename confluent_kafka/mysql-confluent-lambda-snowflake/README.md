@@ -5,7 +5,7 @@
 
 #### Prerequisites
 
-#### MySQL
+#### ---------------------------------MySQL----------------------------------------------------------------------
 ##### [mysqld] server-id = 1 
 ##### log_bin = /var/log/mysql/mysql-bin.log 
 ##### expire_logs_days = 10 
@@ -14,7 +14,7 @@
 
 ##### If it's a RDS --> change the 'BINLOG_FORMAT' from the RDS parameters group to 'ROW'
 
-#### Confluent Platform
+#### ---------------------------------Confluent Platform----------------------------------------------------------------------
 ##### Should have > JAVA 1.8 ; conifgure the JAVA_HOME
 ##### Download the latest version of CP from https://www.confluent.io/download
 ##### Extract the TAR file 
